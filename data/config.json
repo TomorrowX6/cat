@@ -1,0 +1,28 @@
+{
+  "scoring": {
+    "levelThresholds": {
+      "L": [2, 3],
+      "M": [4, 4],
+      "H": [5, 6]
+    },
+    "levelNumeric": {
+      "L": 1,
+      "M": 2,
+      "H": 3
+    },
+    "maxDistance": 30,
+    "fallbackThreshold": 60
+  },
+  "display": {
+    "title": "猫娘TI 人格测试",
+    "subtitle": "用猫娘的方式，重新认识你自己喵~",
+    "author": "基于 SBTI 框架改编 · 猫娘版",
+    "funNote": "本测试纯属娱乐喵~ 不能当作心理诊断、择偶标准、入学考试或猫粮推荐依据哦。",
+    "funNoteSpecial": "本测试纯属娱乐喵！隐藏人格和兜底结果都是主人故意埋的彩蛋，请勿当真，不然会被挠的喵~"
+  },
+  "catnipGate": {
+    "questionId": "catnip_gate_q1",
+    "triggerValue": 3,
+    "addictTriggerValue": 2
+  }
+}
