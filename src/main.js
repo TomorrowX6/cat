@@ -1,23 +1,14 @@
+import questions from './data/questions.json'
+import dimensions from './data/dimensions.json'
+import types from './data/types.json'
+import config from './data/config.json'
 import { calcDimensionScores, scoresToLevels, determineResult } from './engine.js'
 import { createQuiz } from './quiz.js'
 import { renderResult } from './result.js'
 import './style.css'
 
-async function loadJSON(path) {
-  const res = await fetch(path)
-  if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status} ${res.statusText}`)
-  return res.json()
-}
-
-async function init() {
+function init() {
   try {
-    const [questions, dimensions, types, config] = await Promise.all([
-      loadJSON(new URL('../data/questions.json', import.meta.url).href),
-      loadJSON(new URL('../data/dimensions.json', import.meta.url).href),
-      loadJSON(new URL('../data/types.json', import.meta.url).href),
-      loadJSON(new URL('../data/config.json', import.meta.url).href),
-    ])
-
     const loadingScreen = document.getElementById('loading-screen')
     const appContent = document.getElementById('app-content')
     if (loadingScreen) loadingScreen.style.display = 'none'
